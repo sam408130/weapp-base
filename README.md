@@ -7,7 +7,7 @@
 
 ```bash
 $ cd path/to/root
-$ git clone https://github.com/sam408130/weapp-base [project-name] --depth 1
+$ git clone https://github.com/sam408130/weapp-base
 $ cd [project-name]
 ```
 
