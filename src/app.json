@@ -1,36 +1,60 @@
 {
-
   "pages": [
-    "pages/index/index"
+    "pages/home/home",
+    "pages/activity_pintu/activity_pintu",
+    "pages/mytuan/mytuan",
+    "pages/tuan_detail/tuan_detail",
+    "pages/tuan_list/tuan_list",
+    "pages/item_tuan/item_tuan",
+    "pages/post_step_two/post_step_two",
+    "pages/kan_success/kan_success",
+    "pages/mykan/mykan",
+    "pages/kanDetail/kanDetail",
+    "pages/post_step_one/post_step_one",
+    "pages/myauction/myauction",
+    "pages/item_auction_list/item_auction_list",
+    "pages/mypost/mypost",
+    "pages/lottery/lottery",
+    "pages/submit/submit",
+    "pages/post_success/post_success",
+    "pages/share_page/share_page",
+    "pages/user_task/user_task",
+    "pages/dan_detail/dan_detail",
+    "pages/pay_success/pay_success",
+    "pages/myorder/myorder",
+    "pages/order_detail/order_detail",
+    "pages/post/post",
+    "pages/mysold/mysold",
+    "pages/post_setting/post_setting",
+    "pages/add_address/add_address",
+    "pages/fahuo/fahuo",
+    "pages/item/item",
+    "pages/select_category/select_category",
+    "pages/manage_address/manage_address",
+    "pages/wuliu_detail/wuliu_detail",
+    "pages/webpage/webpage",
+    "pages/item_list/item_list",
+    "pages/mycollection/mycollection",
+    "pages/user_profile/user_profile",
+    "pages/chatroom/chatroom",
+    "pages/myfollow/myfollow",
+    "pages/message_center/message_center",
+    "pages/complain_result/complain_result",
+    "pages/complain_detail/complain_detail",
+    "pages/complain/complain"
   ],
 
   "window": {
-    // 类型：HexColor；默认值：#000000
-    // 导航栏背景颜色，如"#000000"
     "navigationBarBackgroundColor": "#ffffff",
-    // 类型：String；默认值：white
-    // 导航栏标题颜色，仅支持 black/white
-    "navigationBarTextStyle": "black",
-    // 类型：String；默认值：无
-    // 导航栏标题文字内容
-    "navigationBarTitleText": "WeApp Boilerplate",
-    // 类型：HexColor；默认值：#ffffff
-    // 窗口的背景色
-    "backgroundColor": "#000000",
-    // 类型：String；默认值：dark
-    // 下拉背景字体、loading 图的样式，仅支持 dark/light
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f9f9f9",
     "backgroundTextStyle": "light",
-    // 类型：Boolean；默认值：false
-    // 是否开启下拉刷新，详见页面相关事件处理函数。
-    // https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/page.html?t=1476197491005#页面相关事件处理函数
     "enablePullDownRefresh": false
   },
 
   "networkTimeout": {
-    "request": 10000,
+    "request": 20000,
     "downloadFile": 10000
   },
-  // Debug log to console
-  // https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html#debug
   "debug": true
 }

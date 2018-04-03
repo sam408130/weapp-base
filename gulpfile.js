@@ -51,17 +51,26 @@ gulp.task('clean', del.bind(null, ['dist/*']))
  * Lint source code
  */
 gulp.task('lint', () => {
-  return gulp.src(['*.{js,json}', '**/*.{js,json}', '!node_modules/**', '!dist/**', '!**/bluebird.js'])
+  return gulp.src(['*.{js,json}', '**/*.{js,json}', '!node_modules/**', '!dist/**', '!src/vendor/**', '!src/common/zan/**'])
     .pipe(plugins.eslint())
     .pipe(plugins.eslint.format('node_modules/eslint-friendly-formatter'))
-    .pipe(plugins.eslint.failAfterError())
 })
 
 /**
  * Compile js source to distribution directory
  */
+gulp.task('move', () => {
+  return gulp.src('src/common/zan/**')
+    .pipe(gulp.dest('dist/common/zan'))
+})
+
+gulp.task('move_venddor', () => {
+  return gulp.src('src/vendor/**')
+    .pipe(gulp.dest('dist/vendor'))
+})
+
 gulp.task('compile:js', () => {
-  return gulp.src(['src/**/*.js'])
+  return gulp.src(['src/**/*.js', '!src/vendor/*.js', '!src/common/zan/**/*.js'])
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.babel())
     .pipe(plugins.if(isProduction, plugins.uglify()))
@@ -128,6 +137,8 @@ gulp.task('compile:img', () => {
  */
 gulp.task('compile', ['clean'], next => {
   runSequence([
+    'move',
+    'move_venddor',
     'compile:js',
     'compile:xml',
     'compile:less',

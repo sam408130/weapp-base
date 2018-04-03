@@ -1,9 +1,7 @@
 // Global style write by less
 // Build to dist/app.wxss
-
+@import url(./common/zan/index.wxss);
 page {
-  display: flex;
-  flex-direction: column;
   height: 100%;
   width: 100%;
   background-color: #f9f9f9;
@@ -11,10 +9,263 @@ page {
 }
 
 .container {
+  width: 750rpx;
   display: flex;
   flex: 1;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.custom_tabbar {
+  width: 750rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.items_area {
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  .items_column {
+    margin-left: 10rpx;
+    width: 360rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .colum {
+    width: 10rpx;
+    flex: 1;
+  }
+}
+
+.uitabs {
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  width: 750rpx;
+  height: 140rpx;
+  .tab_content {
+    width: 750rpx;
+    height: 140rpx;
+    position: relative;
+    .dizuo {
+      width: 750rpx;
+      height: 100rpx;
+      position: absolute;
+      background-color: white;
+      z-index: 1;
+      left: 0;
+      bottom: 0;
+      box-shadow: 0 0 20rpx 0 rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .tabhome {
+        width: 90rpx;
+        height: 90rpx;
+        margin-left: 100rpx;
+      }
+      .tabme {
+        width: 90rpx;
+        height: 90rpx;
+        margin-right: 100rpx;
+      }
+      .badge {
+        position: absolute;
+        width: 16rpx;
+        height: 16rpx;
+        background-color: #ff4444;
+        border-radius: 100rpx;
+        top: 0;
+        left: 65rpx;
+      }
+    }
+    .post {
+      position: absolute;
+      top: 0;
+      left: 305rpx;
+      width: 140rpx;
+      height: 140rpx;
+      z-index: 2;
+      image {
+        width: 140rpx;
+        height: 140rpx;
+      }
+    }
+  }
+}
+
+.canvas-box {
+  position: fixed;
+  top: 9999rpx;
+  left: 0
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 24rpx;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.kefu {
+  bottom: 120rpx;
+  right: 20rpx;
+  position: fixed;
+  font-size: 40rpx;
+  color: #ffffff;
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 80rpx;
+  z-index: 3;
+  .main {
+    position: relative;
+    width: 88rpx;
+    height: 88rpx;
+    image {
+      width: 88rpx;
+      height: 88rpx;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    contact-button {
+      top: 22rpx;
+      left: 22rpx;
+    }
+  }
+  .xinren {
+    position: relative;
+    width: 150rpx;
+    height: 150rpx;
+    image {
+      width: 150rpx;
+      height: 150rpx;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+.to_top {
+  bottom: 220rpx;
+}
+
+.to_top2 {
+  bottom: 310rpx;
+}
+
+.xinren_icon {
+
+}
+
+.phone-contact {
+  bottom: 20rpx;
+  right: 20rpx;
+  position: absolute;
+  color: #ffffff;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+contact-button {
+    opacity: 0;
+    position: absolute;
+}
+
+.line-10 {
+  background-color: #f9f9f9;
+  width: 750rpx;
+  height: 20rpx;
+}
+.white {
+  background-color: white;
+}
+
+.line-1 {
+  background-color: #f9f9f9;
+  width: 750rpx;
+  height: 2rpx;
+}
+
+.line-50 {
+  background-color: #f9f9f9;
+  width: 750rpx;
+  height: 100rpx;
+}
+
+.icon_btn {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
+  image {
+    width: 50rpx;
+    height: 50rpx;
+  }
+  text {
+    color: black;
+    font-size: 20rpx;
+    font-weight: lighter;
+  }
+}
+
+.box {
+  border-radius: 10rpx;
+  box-shadow: 0 4rpx 12rpx 0 rgba(0,0,0,0.1);
+}
+
+.form {
+  border:none;
+  padding: 0rpx;
+  margin: 0rpx;
+}
+
+
+.formBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+.white {
+  background-color: white;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+button::after {
+  border: none;
 }
